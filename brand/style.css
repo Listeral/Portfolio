@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+
+h1 {
+    z-index: 10;
+    left: 28%;
+    top: 15%;
+    font-size: 120px;
+    font-family: "Roboto";
+    color: rgb(7, 136, 156);
+    line-height: 0.096;
+    text-align: left;
+    position: absolute;
+}
+
+.info {
+    position: absolute;
+    right:0px;
+    top:0px;
+    width: 30%;
+    padding:40px;
+    margin-top: 80px;
+    font-family: "Roboto";
+}
+
+.contextHeader {
+    padding-top:20px;
+    color: rgb(7, 136, 156);
+}
+
+.context {
+    color: rgb(7, 136, 156);
+    padding-bottom:35px;
+}
+
+/**
+ SUBSCRIBE BUTTON CODE
+*/
+
+html {
+    height: 100%
+}
+
+body {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	height: 100%;
+}
+
+input:focus {
+	outline: none;
+}
+
+.ctr {
+	display: block;
+	position: relative;
+}
+
+.loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgb(7, 136, 156);
+	width: 0%;
+	z-index: 99;
+	pointer-events: none;
+	-webkit-transition: 3s all ease;
+	transition: 3s all ease;
+}
+
+.loader.full {
+	width: 100%;
+}
+
+.loader.done {
+	background: rgb(7, 136, 156);
+	-webkit-transition: .3s all ease;
+	transition: .3s all ease;
+	height: 0;
+}
+
+input {
+	line-height: 40px;
+	width: 100%;
+	padding: 0 20px;
+	border: none;
+    cursor: pointer;
+    font-size: 1.17em;
+	color: rgb(7, 136, 156);
+	position: relative;
+	z-index: 10;
+	background: transparent;
+	color: transparent;
+	font-weight: 700;
+	-webkit-transition: .3s all ease;
+	transition: .3s all ease;
+}
+
+input.full {
+	pointer-events: none !important;
+	width: 0%;
+}
+
+.indicator {
+    position: absolute;
+    font-size: 1.17em;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 5px;
+	background: rgb(7, 136, 156);
+	-webkit-transition: .3s all ease;
+	transition: .3s all ease;
+	z-index: 9;
+}
+
+.indicator:after {
+	content: attr(data-content);
+	position: absolute;
+	top: -30px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #E37221;
+	-webkit-transition: inherit;
+	transition: inherit;
+	z-index: 999;
+	text-align: left;
+	font-weight: 700;
+}
+
+input:focus {
+    color: white;
+    font-weight: 300;
+}
+
+input:focus + .indicator {
+	height: 100%
+}
+
+input.full:focus + .indicator {
+	height: 5px;
+	color: rgb(7, 136, 156);
+}
+
+input:focus + .indicator:after {
+	color: rgb(7, 136, 156);
+}
